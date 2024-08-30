@@ -1,9 +1,43 @@
 {
-    "list":[
-        {
-            "id": 1,
-            "item": "clothes",
-            "quantity":0
-        }
-    ]
+  "list": [
+    {
+      "id": "1",
+      "item": "clothes",
+      "quantity": 0,
+      "category": "clothing"
+    },
+    {
+      "id": "6923",
+      "item": "",
+      "quantity": 0,
+      "category": "food"
+    },
+    {
+      "id": "0bae",
+      "item": "",
+      "quantity": 0,
+      "category": ""
+    },
+    {
+      "id": "50bb"
+    },
+    {
+      "id": "4f63",
+      "item": "eggz",
+      "quantity": "3",
+      "category": "food"
+    },
+    {
+      "id": "0244",
+      "item": "veggies",
+      "quantity": "34",
+      "category": "food"
+    },
+    {
+      "id": "15b6",
+      "item": "kab",
+      "quantity": "1",
+      "category": "food"
+    }
+  ]
 }

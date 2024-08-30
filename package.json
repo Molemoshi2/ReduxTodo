@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch databases/db.json --port 3001"
+    "server": "json-server --watch databases/shoppinglist.json --port 3001"
   },
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",

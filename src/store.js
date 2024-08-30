@@ -6,6 +6,6 @@ const store = configureStore({
         listArray:AddSlice.reducer ,
 
     }
-})
+});
 
 export default store

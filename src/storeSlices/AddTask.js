@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const AddSlice = createSlice({
-    name: 'Add',
+    name: 'ShoppingList',
     initialState: {value:[{item:'tomatoes',quantity:0,category:'food'}]},
     reducers:{
         addtask: (state,action)=>{
@@ -12,7 +12,8 @@ export const AddSlice = createSlice({
                 console.error("Invalid task payload:", action.payload);
               }
             
-        }
+        },
+
     }
 })
 

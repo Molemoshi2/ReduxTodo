@@ -1,4 +1,9 @@
+*{
+    text-align: center;
+}
+
 .task-container{
     display: flex;
     gap:2rem;
+    justify-content: center;
 }
