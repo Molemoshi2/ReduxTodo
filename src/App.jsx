@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addtask } from './storeSlices/AddTask';
+import { addtask,addAll } from './storeSlices/AddTask';
+import axios from 'axios';
 
 function App() {
   // State for managing the new task input
@@ -14,13 +15,13 @@ function App() {
   
   const dispatch = useDispatch();
 
+  let url = 'http://localhost:3001/list'
   // Function to handle adding a task
   const handleAddTask = () => {
     if (newTask.trim()) {
       dispatch(addtask({ item: newTask, quantity: quantity, category: category }));
       setNewTask(''); // Clear the input field after adding the task
       //adding the tasks to the json server
-      let url = 'http://localhost:3001/list'
       fetch(url,{
         method:'POST',
         headers:{ 'Content-Type': 'application/json' },
@@ -31,6 +32,16 @@ function App() {
       
     }
   };
+
+
+  useEffect(()=>{
+    const getData = async ()=>{
+      axios.get(url).then((res)=>{
+          dispatch(addAll(res.data));
+        })
+    }
+    getData()
+  },[])
 
   return (
     <>

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const AddSlice = createSlice({
     name: 'ShoppingList',
-    initialState: {value:[{item:'tomatoes',quantity:0,category:'food'}]},
+    initialState: {value:[]},
     reducers:{
         addtask: (state,action)=>{
             if (action.payload && action.payload.item) {
@@ -13,10 +13,12 @@ export const AddSlice = createSlice({
               }
             
         },
-
+        addAll: (state,action)=>{
+          state.value = action.payload
+        }
     }
 })
 
 
-export const {addtask} = AddSlice.actions
+export const {addtask,addAll} = AddSlice.actions
 export default AddSlice.reducer
